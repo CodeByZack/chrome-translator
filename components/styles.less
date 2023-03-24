@@ -1,0 +1,39 @@
+.ai-translator-wrapper{
+    .ai-translator-header{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--rs-border-primary);
+        padding: 8px;
+    }
+    .ai-translator-content{
+        padding: 8px;
+        .ai-translator-input{
+            resize: none;
+        }
+        .ai-translator-content-divider{
+            height: 32px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            .ai-translator-status{
+                background-color: #fff;
+                height: 16px;
+                line-height: 16px;
+                margin-right: 4px;
+                // position: absolute;
+                // left: 0;
+                // top: 0;
+                // z-index: 1;
+            }
+            .ai-translator-line{
+                flex: 1;
+                height: 1px;
+                background-color: var(--rs-border-primary);
+            }
+        }
+        .ai-translator-result{
+            font-size: 14px;
+        }
+    }
+
+}
