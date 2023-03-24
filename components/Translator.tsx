@@ -60,13 +60,8 @@ const Translator = (props: IProps) => {
   return (
       <div className="ai-translator-wrapper rs-theme-light" ref={drag.domRef} onMouseUp={e => e.stopPropagation()} onMouseDown={(e) => e.stopPropagation()} style={wrapperStyle}>
         <div className="ai-translator-header">
-          <span style={{
-            display: "block",
-            width: 20,
-            height: 20,
-            marginRight:8
-          }} ><LogoSvg /></span>
-          <span>AI Translator</span>
+          <span className="ai-translator-logo"><LogoSvg /></span>
+          <span className="ai-translator-title">AI Translator</span>
         </div>
         <div className="ai-translator-content">
           <Input value={inputValue} onChange={(e)=>{setInput(e)}} className="ai-translator-input" as="textarea" rows={3} placeholder="请输入" />

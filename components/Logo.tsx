@@ -25,7 +25,7 @@ const Logo = (props: IProps) => {
         e.stopPropagation()
         showTranslator();
     }}>
-        <LogoSvg />
+        <LogoSvg style={{ display : "block" }} />
     </div>
 }
 

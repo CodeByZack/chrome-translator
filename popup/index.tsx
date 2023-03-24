@@ -31,13 +31,8 @@ function IndexPopup() {
   return (
     <div className="ai-translator-popup">
         <div className="ai-translator-header">
-          <span style={{
-            display: "block",
-            width: 20,
-            height: 20,
-            marginRight:8
-          }} ><LogoSvg /></span>
-          <span>AI Translator</span>
+          <span className="ai-translator-logo"><LogoSvg /></span>
+          <span className="ai-translator-title">AI Translator</span>
         </div>
         <Form className="ai-translator-form" model={model} formValue={formValue} onSubmit={handleSave} onChange={setFormValue}>
             <Form.Group controlId="API_KEY">
