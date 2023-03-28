@@ -1,4 +1,4 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
   '@geist-ui/core': ^2.3.8
@@ -20,16 +20,16 @@ specifiers:
   typescript: 4.9.4
 
 dependencies:
-  '@geist-ui/core': 2.3.8_biqbaboplfbrettd7655fr4n2y
+  '@geist-ui/core': 2.3.8_react-dom@18.2.0+react@18.2.0
   '@plasmohq/messaging': 0.1.6_react@18.2.0
   '@plasmohq/storage': 1.3.1_react@18.2.0
   eventsource-parser: 0.1.0
   franc: 6.1.0
   iso-639-3-to-1: 1.0.0
-  plasmo: 0.67.4_biqbaboplfbrettd7655fr4n2y
+  plasmo: 0.67.4_react-dom@18.2.0+react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  rsuite: 5.28.3_biqbaboplfbrettd7655fr4n2y
+  rsuite: 5.28.3_react-dom@18.2.0+react@18.2.0
 
 devDependencies:
   '@plasmohq/prettier-plugin-sort-imports': 3.6.3_prettier@2.8.3
@@ -717,7 +717,7 @@ packages:
       cross-spawn: 7.0.3
     dev: false
 
-  /@geist-ui/core/2.3.8_biqbaboplfbrettd7655fr4n2y:
+  /@geist-ui/core/2.3.8_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-OKwGgTA4+fBM41eQbqDoUj4XBycZbYH7Ynrn6LPO5yKX7zeWPu/R7HN3vB4/oHt34VTDQI5sDNb1SirHvNyB5w==}
     peerDependencies:
       react: '>=16.9.0'
@@ -1483,7 +1483,6 @@ packages:
       less: 4.1.3
     transitivePeerDependencies:
       - '@parcel/core'
-      - supports-color
     dev: false
 
   /@parcel/transformer-postcss/2.8.3_@parcel+core@2.8.3:
@@ -1639,7 +1638,7 @@ packages:
       nullthrows: 1.1.1
     dev: false
 
-  /@plasmohq/consolidate/0.17.0_biqbaboplfbrettd7655fr4n2y:
+  /@plasmohq/consolidate/0.17.0_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-Na8imBnvzYPtzkK+9Uv9hPZ/oJti/0jgiQWD222SHxHw2QCVuR4KzslxXCy/rS8gGluSiTs1BGVvc3d2O6aJCA==}
     engines: {node: '>= 0.10.0'}
     peerDependencies:
@@ -1816,7 +1815,7 @@ packages:
       nullthrows: 1.1.1
     dev: false
 
-  /@plasmohq/parcel-config/0.33.4_biqbaboplfbrettd7655fr4n2y:
+  /@plasmohq/parcel-config/0.33.4_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-OZxC4J6yJ2srjieYdO8la6UcNUhfjp1o/UbEjUU8RebcobqbDbwqwkakkKF4u98kg7rCynjAvm0SJMxPOP3Beg==}
     dependencies:
       '@parcel/config-default': 2.8.3_@parcel+core@2.8.3
@@ -1849,7 +1848,7 @@ packages:
       '@plasmohq/parcel-transformer-inline-css': 0.3.3
       '@plasmohq/parcel-transformer-manifest': 0.14.3
       '@plasmohq/parcel-transformer-svelte3': 0.4.5
-      '@plasmohq/parcel-transformer-vue3': 0.3.7_biqbaboplfbrettd7655fr4n2y
+      '@plasmohq/parcel-transformer-vue3': 0.3.7_react-dom@18.2.0+react@18.2.0
     transitivePeerDependencies:
       - '@swc/core'
       - arc-templates
@@ -2052,7 +2051,7 @@ packages:
       '@parcel/utils': 2.8.3
     dev: false
 
-  /@plasmohq/parcel-transformer-vue3/0.3.7_biqbaboplfbrettd7655fr4n2y:
+  /@plasmohq/parcel-transformer-vue3/0.3.7_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-pDeE/68glAmfBGu2FP48jiSzWP1Uw6CDG8SknzvHU9mOcqp03P8t9v03NpEtJ/ubs3VZOKa2HgI/4zfDFLNMkQ==}
     engines: {parcel: '>= 2.7.0'}
     dependencies:
@@ -2062,7 +2061,7 @@ packages:
       '@parcel/source-map': 2.1.1
       '@parcel/types': 2.8.3_@parcel+core@2.8.3
       '@parcel/utils': 2.8.3
-      '@plasmohq/consolidate': 0.17.0_biqbaboplfbrettd7655fr4n2y
+      '@plasmohq/consolidate': 0.17.0_react-dom@18.2.0+react@18.2.0
       '@vue/compiler-sfc': 3.2.47
       nullthrows: 1.1.1
       semver: 7.3.8
@@ -2170,7 +2169,7 @@ packages:
     resolution: {integrity: sha512-rZTgpTH3H3HLczCA2rnkWfoMKm0ZXoRzsrkVujfP/FfslnKUMvO6w56pa8pCvhWGpNEPUsLS2ULnFGpTEcup/Q==}
     dev: false
 
-  /@rsuite/icons/1.0.2_biqbaboplfbrettd7655fr4n2y:
+  /@rsuite/icons/1.0.2_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-Y7vJNDQpJnFlyYSUXQ2iQ9Meg7+ZKcrIenhpYDdM3c7vYDE/L7pml+hrK28jk6QfV/QkVv5B504D+l7aM6AAJQ==}
     peerDependencies:
       react: '>=16.8.0'
@@ -2989,11 +2988,6 @@ packages:
 
   /debug/3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
     dependencies:
       ms: 2.1.3
     dev: false
@@ -3774,8 +3768,6 @@ packages:
       mime: 1.6.0
       needle: 3.2.0
       source-map: 0.6.1
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /lightningcss-darwin-arm64/1.19.0:
@@ -4132,8 +4124,6 @@ packages:
       debug: 3.2.7
       iconv-lite: 0.6.3
       sax: 1.2.4
-    transitivePeerDependencies:
-      - supports-color
     dev: false
     optional: true
 
@@ -4353,7 +4343,7 @@ packages:
     engines: {node: '>= 6'}
     dev: false
 
-  /plasmo/0.67.4_biqbaboplfbrettd7655fr4n2y:
+  /plasmo/0.67.4_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-j+wsxvEnzosNGprvXdoDzNRuKvZgcpPqFFYO+Em9ekqJnZ6RLP7GYpv0mXLDtq8RTQz1IYSyOFHyoecEtjsqaQ==}
     hasBin: true
     dependencies:
@@ -4363,7 +4353,7 @@ packages:
       '@parcel/package-manager': 2.8.3_@parcel+core@2.8.3
       '@parcel/watcher': 2.1.0
       '@plasmohq/init': 0.6.2
-      '@plasmohq/parcel-config': 0.33.4_biqbaboplfbrettd7655fr4n2y
+      '@plasmohq/parcel-config': 0.33.4_react-dom@18.2.0+react@18.2.0
       '@plasmohq/parcel-core': 0.0.0
       archiver: 5.3.1
       buffer: 6.0.3
@@ -4622,7 +4612,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-window/1.8.8_biqbaboplfbrettd7655fr4n2y:
+  /react-window/1.8.8_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-D4IiBeRtGXziZ1n0XklnFGu7h9gU684zepqyKzgPNzrsrk7xOCxni+TCckjg2Nr/DiaEEGVVmnhYSlT2rB47dQ==}
     engines: {node: '>8.0.0'}
     peerDependencies:
@@ -4736,7 +4726,7 @@ packages:
       fsevents: 2.3.2
     dev: false
 
-  /rsuite-table/5.10.1_v2m5e27vhdewzwhryxwfaorcca:
+  /rsuite-table/5.10.1_ae99d26bf538c96cd8f1c5ec503a2210:
     resolution: {integrity: sha512-95vB4mPhxPKkq+EfYgQFVJ3BWDbRIVUs59hMwnYXZhiLKY1fY/cJd+ETeB725Qqcj7/AN3tDySo+CIKWLp1FAA==}
     peerDependencies:
       prop-types: ^15.7.2
@@ -4745,7 +4735,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.0
       '@juggle/resize-observer': 3.4.0
-      '@rsuite/icons': 1.0.2_biqbaboplfbrettd7655fr4n2y
+      '@rsuite/icons': 1.0.2_react-dom@18.2.0+react@18.2.0
       classnames: 2.3.2
       dom-lib: 3.1.6
       lodash: 4.17.21
@@ -4755,7 +4745,7 @@ packages:
       react-is: 17.0.2
     dev: false
 
-  /rsuite/5.28.3_biqbaboplfbrettd7655fr4n2y:
+  /rsuite/5.28.3_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-1zOlIdb84zzhtguZwqs/efyB4tqOXFwURiBb4c+mPAu1TiG91FyvWwclaBdcxc5mPv/GMvd/4hcEGfQKuLIodg==}
     peerDependencies:
       react: '>=16.8.0'
@@ -4763,7 +4753,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.0
       '@juggle/resize-observer': 3.4.0
-      '@rsuite/icons': 1.0.2_biqbaboplfbrettd7655fr4n2y
+      '@rsuite/icons': 1.0.2_react-dom@18.2.0+react@18.2.0
       '@types/chai': 4.3.4
       '@types/lodash': 4.14.191
       '@types/prop-types': 15.7.5
@@ -4775,8 +4765,8 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      react-window: 1.8.8_biqbaboplfbrettd7655fr4n2y
-      rsuite-table: 5.10.1_v2m5e27vhdewzwhryxwfaorcca
+      react-window: 1.8.8_react-dom@18.2.0+react@18.2.0
+      rsuite-table: 5.10.1_ae99d26bf538c96cd8f1c5ec503a2210
       schema-typed: 2.1.2
     dev: false
 
