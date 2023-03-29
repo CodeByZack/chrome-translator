@@ -10,7 +10,7 @@ const Logo = (props: IProps) => {
     const { x, y, showTranslator = ()=>{} } = props;
 
     const style: CSSProperties = {
-        width: 30, height: 30,
+        width: 25, height: 25,
         position: "absolute",
         top: `${y}px`,
         left: `${x}px`,
