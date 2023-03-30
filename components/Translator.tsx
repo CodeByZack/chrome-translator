@@ -1,7 +1,6 @@
 import { CSSProperties, useEffect, useState } from "react";
 import useDrag from "~utils/use-drag";
 import LogoSvg from "react:~assets/logo.svg"
-import { sendToBackground } from "@plasmohq/messaging";
 import { Input, Loader } from "rsuite";
 import { getPort } from "@plasmohq/messaging/port"
 
@@ -41,28 +40,25 @@ const Translator = (props: IProps) => {
   //   setResultText(txt);
   // };
   const handleMsg = (msg)=>{
-    if(msg.inputText !== text){
-      translatePort.onMessage.removeListener(handleMsg);
-      return;
-    }
-
-    if(msg.error){
-      setResultText(msg.error.message || "出错了");
-      translatePort.onMessage.removeListener(handleMsg);
-      // translatePort.disconnect();
-      setLoading(false);
-    }else if(msg?.data === "[DONE]"){
-      translatePort.onMessage.removeListener(handleMsg);
-      // translatePort.disconnect();
-      setLoading(false);
-    }else{
-      const obj = JSON.parse(msg.data);
-      const content = obj.choices[0].delta.content;
-      console.log({
-        text, content
-      })
-      if(content){
-        setResultText(t=>t+=content);
+    if(msg.inputText === text){
+      if(msg.error){
+        setResultText(msg.error.message || "出错了");
+        translatePort.onMessage.removeListener(handleMsg);
+        // translatePort.disconnect();
+        setLoading(false);
+      }else if(msg?.data === "[DONE]"){
+        translatePort.onMessage.removeListener(handleMsg);
+        // translatePort.disconnect();
+        setLoading(false);
+      }else{
+        const obj = JSON.parse(msg.data);      
+        const content = obj.choices[0].delta.content;
+        console.log({
+          text, content
+        })
+        if(content){
+          setResultText(t=>t+=content);
+        }
       }
     }
   };
@@ -99,6 +95,7 @@ const Translator = (props: IProps) => {
       translatePort.onMessage.addListener(handleMsg)
     }
     return ()=>{
+      console.log(text,"：卸载了...");
       translatePort.onMessage.removeListener(handleMsg);
     }
   },[text])

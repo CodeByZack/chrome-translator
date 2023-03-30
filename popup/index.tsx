@@ -14,8 +14,8 @@ function IndexPopup() {
 
   const handleSave : FormProps['onSubmit'] = (checkStatus, event)=>{
     if(!checkStatus) return;
-    console.log(formValue);
     saveSetting(formValue);
+    window.close();
   }; 
 
   const init = async ()=>{

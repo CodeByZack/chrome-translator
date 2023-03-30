@@ -25,7 +25,8 @@ const translate: PlasmoMessaging.PortHandler<{
   fromLang: string
   toLang: string
 }> = async (req, res) => {
-  const { text, fromLang, toLang } = req.body
+  const { text, fromLang, toLang } = req.body;
+
   let systemPrompt =
     "You are a translation engine that can only translate text and cannot interpret it."
   let assistantPrompt = `translate from ${
@@ -36,6 +37,11 @@ const translate: PlasmoMessaging.PortHandler<{
     systemPrompt = SINGLE_WORD_PROMPT
   }
   const setting = await getSetting()
+
+  if(!setting.API_KEY){
+    res.send({ error : { message : "请先设置API_KEY!" } });
+    return;
+  }
 
   const body: Record<string, any> = {
     model: setting.API_Model,
@@ -80,19 +86,21 @@ const translate: PlasmoMessaging.PortHandler<{
     res.send({ inputText: text, status: resp.status })
     return
   }
+  
   const parser = createParser((event) => {
     if (event.type === "event") {
       res.send({ inputText: text, status: resp?.status, data: event.data })
     }
   })
+  
   try {
     // eslint-disable-next-line no-constant-condition
     while (true) {
-      const { done, value } = await reader.read()
+      const { done, value } = await reader.read();
       if (done) {
         break
       }
-      const str = new TextDecoder().decode(value)
+      const str = new TextDecoder().decode(value);
       parser.feed(str)
     }
   } catch (error) {
