@@ -24,8 +24,10 @@ const translate: PlasmoMessaging.PortHandler<{
   text: string
   fromLang: string
   toLang: string
+  type: "normal" | "reply"
 }> = async (req, res) => {
-  const { text, fromLang, toLang } = req.body
+  const { text, fromLang, toLang, type } = req.body
+  console.log({ text, fromLang, toLang, type });
   let systemPrompt =
     "You are a translation engine that can only translate text and cannot interpret it."
   let assistantPrompt = `translate from ${
@@ -71,18 +73,18 @@ const translate: PlasmoMessaging.PortHandler<{
       body: JSON.stringify(body)
     })
   } catch (error) {
-    res.send({ error })
+    res.send({ inputText: text, error, type })
     return
   }
 
   const reader = resp?.body?.getReader()
   if (!reader) {
-    res.send({ inputText: text, status: resp.status })
+    res.send({ inputText: text, status: resp.status, type })
     return
   }
   const parser = createParser((event) => {
     if (event.type === "event") {
-      res.send({ inputText: text, status: resp?.status, data: event.data })
+      res.send({ inputText: text, status: resp?.status, data: event.data, type })
     }
   })
   try {
@@ -95,8 +97,9 @@ const translate: PlasmoMessaging.PortHandler<{
       const str = new TextDecoder().decode(value)
       parser.feed(str)
     }
+    parser.reset();
   } catch (error) {
-    res.send({ inputText: text, error })
+    res.send({ inputText: text, error, type })
     return
   }
 }

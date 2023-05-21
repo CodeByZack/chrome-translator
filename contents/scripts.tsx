@@ -71,7 +71,6 @@ const main = () => {
   document.addEventListener('mouseup', (event: MouseEvent) => {
     window.setTimeout(async () => {
       let text = (window.getSelection()?.toString() ?? '').trim();
-      console.log({ text })
       if (text && !STORE.IS_PANEL_SHOW && !STORE.IS_ICON_SHOW) {
         showPopupIcon(text, event.pageX + 7, event.pageY + 7);
       }
