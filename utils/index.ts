@@ -1,4 +1,4 @@
-const API_URL = "https://api.openai.com/v1/chat/completions";
+const API_URL = "https://aigptx.top/v1/chat/completions";
 import { Storage } from "@plasmohq/storage"
 
 
