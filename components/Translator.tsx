@@ -1,9 +1,7 @@
 import { CSSProperties, useEffect, useMemo, useRef, useState } from "react"
 import LogoSvg from "react:~assets/logo.svg"
 import { Button, ButtonGroup, Input, Loader, Panel } from "rsuite"
-
 import { usePort } from "@plasmohq/messaging/hook"
-import { getPort } from "@plasmohq/messaging/port"
 
 import delay from "~utils/delay"
 import useDrag from "~utils/use-drag"
@@ -15,8 +13,6 @@ interface IProps {
   toLang: string
   text: string
 }
-
-const translatePort = getPort("translate")
 
 const isInGmailDetailPage = () => {
   console.log(window.location)

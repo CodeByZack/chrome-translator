@@ -39,6 +39,11 @@ const translate: PlasmoMessaging.PortHandler<{
   }
   const setting = await getSetting()
 
+  if(!setting.API_KEY){
+    res.send({ error : { message : "请先设置API_KEY!" } });
+    return;
+  }
+
   const body: Record<string, any> = {
     model: setting.API_Model,
     temperature: 0,
@@ -82,19 +87,21 @@ const translate: PlasmoMessaging.PortHandler<{
     res.send({ inputText: text, status: resp.status, type })
     return
   }
+  
   const parser = createParser((event) => {
     if (event.type === "event") {
       res.send({ inputText: text, status: resp?.status, data: event.data, type })
     }
   })
+  
   try {
     // eslint-disable-next-line no-constant-condition
     while (true) {
-      const { done, value } = await reader.read()
+      const { done, value } = await reader.read();
       if (done) {
         break
       }
-      const str = new TextDecoder().decode(value)
+      const str = new TextDecoder().decode(value);
       parser.feed(str)
     }
     parser.reset();
