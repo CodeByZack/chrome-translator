@@ -1289,10 +1289,10 @@
   resolved "https://registry.yarnpkg.com/@plasmohq/init/-/init-0.6.2.tgz#b50071fee96ff9225edc5ea7cdf4c13dc077d334"
   integrity sha512-4fA29jzUU5tHpsJ3rpUEbt/jme/aCDIqolAbTWd6F7M4rJ/33q4mVQ6eIflWjUhVNcygjpjMApdT2gIrNQi0fw==
 
-"@plasmohq/messaging@^0.3.0":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@plasmohq/messaging/-/messaging-0.3.3.tgz#1840dc08ec8c15d1fb5e29ab731f2ad27b7a6b8f"
-  integrity sha512-QXwOgrGTVCv5QyfmLZXqJwzcS+YcfWyjvH/ronJbBftroToGuIpzAkgEqWZki9h+y90sHRvTcGYWEKx0hheNtQ==
+"@plasmohq/messaging@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@plasmohq/messaging/-/messaging-0.4.0.tgz#5ba5feb50aa2d1c432f67e29ae679ca55effa1d8"
+  integrity sha512-xfG1r71fh/YPrTs9amMqiNWqM+xAq8JZZl8iuU8iSq1ZDhFWZ5EfS44h8IBmrTmHaobpgnsKpw6HZVHjfWTHTg==
   dependencies:
     nanoid "4.0.2"
 

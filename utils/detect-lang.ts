@@ -3,7 +3,7 @@
 
 export const supportLanguages: [string, string][] = [
     ['en', 'English'],
-    ['zh-Hans', '简体中文'],
+    ['zh-Hans', 'Chinese'],
 ]
 export const langMap: Map<string, string> = new Map(supportLanguages)
 export const langMapReverse = new Map(supportLanguages.map(([standardLang, lang]) => [lang, standardLang]))

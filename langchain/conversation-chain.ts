@@ -1,6 +1,6 @@
 import { OpenAI } from "langchain/llms/openai";
-import { LLMChain } from "langchain/chains";
-import { PromptTemplate } from "langchain/prompts";
+import { BufferMemory } from "langchain/memory";
+import { ConversationChain } from "langchain/chains";
 import 'dotenv/config'
 
 const OPENAI_API_BASE_URL = process.env.OPENAI_API_BASE_URL;
@@ -33,19 +33,15 @@ const model = new OpenAI({
     basePath: OPENAI_API_BASE_URL
 });
 
-const template = "我想去{destination}旅游，你有什么建议么?"
 
-const prompt = new PromptTemplate({
-  template: template,
-  inputVariables: ["destination"]
-})
-
-
-const chain = new LLMChain({ llm: model, prompt: prompt });
 
 const main = async ()=>{
-    const res = await chain.call({ destination : "海南" });
-    console.log(res);
+    const memory = new BufferMemory();
+    const chain = new ConversationChain({ llm: model, memory: memory });
+    const res1 = await chain.call({ input: "你好，我的名字是空山，你是谁" });
+    // console.log(res1);
+    const res2 = await chain.call({ input: "你知道我的名字吗" });
+    // console.log(res2);
 };
 
 main();
